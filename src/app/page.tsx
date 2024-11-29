@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Shield, Award, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Link from 'next/link';
 
 interface Feature {
   icon: React.ReactNode;
@@ -31,7 +32,7 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-green-50 to-white">
+      <section className="bg-gradient-to-b from-green-200 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-2">
@@ -60,20 +61,21 @@ const Home: React.FC = () => {
               Build your reputation, verify credentials, and access the entire Linea ecosystem.
             </p>
             <div className="flex justify-center gap-4">
-              <Button 
+            <Link href='./dashboard'><Button 
                 size="lg"
                 className="bg-green-600 hover:bg-green-700"
               >
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+              </Button></Link>
+              <Link href={"https://linea-passport.gitbook.io/linea-passport-docs/"}>
               <Button 
                 size="lg"
                 variant="outline"
                 className="border-green-600 text-green-600 hover:bg-green-50"
               >
                 Learn More
-              </Button>
+              </Button></Link>
             </div>
           </div>
         </div>
